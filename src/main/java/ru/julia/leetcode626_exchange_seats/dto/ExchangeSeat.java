@@ -3,8 +3,8 @@ package ru.julia.leetcode626_exchange_seats.dto;
 import javax.persistence.Column;
 
 public class ExchangeSeat {
-    Integer id;
-    String student;
+    final Integer id;
+    final String student;
 
     public Integer getId() {
         return id;

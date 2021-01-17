@@ -20,8 +20,7 @@ public class SeatServiceImpl implements SeatService {
         List<Seat> seats = seatRepository.findAll();
         List<ExchangeSeat> exchangeSeats = new ArrayList<>();
         int size = seats.size();
-        if (seats.size() % 2 == 0) {
-        } else {
+        if (seats.size() % 2 != 0) {
             size = seats.size() - 1;
         }
         for (int i = 0; i < size; i = i + 2) {

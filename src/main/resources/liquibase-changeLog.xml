@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet  author="Julia"  id="changelog-1">
+    </changeSet>
+
+    <changeSet  author="Julia"  id="changelog-2">
+        <createTable tableName="seats">
+            <column name="seat_id" type="integer">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="student" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet  author="Julia"  id="changelog-3">
+        <insert tableName="seats">
+            <column name="student">
+                <constraints nullable="false"/>
+                Abbot
+            </column>
+            <column name="seat_id">
+                1
+            </column>
+        </insert>
+    </changeSet>
+
+    <changeSet id="changelog-4" author="Julia">
+        <delete tableName="seats">
+            <where>seat_id = 1
+            </where>
+        </delete>
+    </changeSet>
+
+    <changeSet  author="Julia"  id="changelog-5">
+        <insert tableName="seats">
+            <column name="student">
+                Abbot
+            </column>
+            <column name="seat_id">
+                1
+            </column>
+        </insert>
+    </changeSet>
+
+    <changeSet  author="Julia"  id="changelog-6">
+        <insert tableName="seats">
+            <column name="student">
+                Doris
+            </column>
+            <column name="seat_id">
+                2
+            </column>
+        </insert>
+    </changeSet>
+
+    <changeSet  author="Julia"  id="changelog-7">
+        <insert tableName="seats">
+            <column name="student">
+                Emerson
+            </column>
+            <column name="seat_id">
+                3
+            </column>
+        </insert>
+    </changeSet>
+
+    <changeSet  author="Julia"  id="changelog-8">
+        <insert tableName="seats">
+            <column name="student">
+                Green
+            </column>
+            <column name="seat_id">
+                4
+            </column>
+        </insert>
+    </changeSet>
+
+    <changeSet  author="Julia"  id="changelog-9">
+        <insert tableName="seats">
+            <column name="student">
+                Jeames
+            </column>
+            <column name="seat_id">
+                5
+            </column>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
+
